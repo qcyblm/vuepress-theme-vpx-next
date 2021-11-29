@@ -3,7 +3,7 @@ import { path } from '@vuepress/utils'
 import { head, themeConfig } from './configs/index'
 
 export default defineUserConfig({
-  base: '/vuepress/',
+  base: '/vuepress-theme-vpx-next/',
   locales: {
     '/': {
       lang: 'zh-CN',

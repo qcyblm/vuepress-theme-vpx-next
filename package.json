@@ -19,7 +19,6 @@
     "release": "yarn clean && yarn copy && yarn build && lerna publish prerelease --dist-tag next"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --fix",
     "*.{json,yml,css,scss}": "prettier --write",
     "package.json": "sort-package-json"
   },
