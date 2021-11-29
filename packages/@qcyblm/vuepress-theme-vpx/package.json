@@ -1,0 +1,58 @@
+{
+  "name": "@qcyblm/vuepress-theme-vpx",
+  "version": "2.0.0-beta.1",
+  "description": "VPX theme for VuePress",
+  "keywords": [
+    "vuepress-theme-vpx",
+    "vuepress",
+    "theme",
+    "vpx"
+  ],
+  "homepage": "https://qcyblm.github.io/vuepress-theme-vpx-next",
+  "bugs": {
+    "url": "https://github.com/qcyblm/vuepress-theme-vpx-next/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qcyblm/vuepress-theme-vpx-next.git"
+  },
+  "license": "MIT",
+  "author": "qcyblm <qcyblm@outlook.com>",
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "copy": "cpx \"src/**/*.{d.ts,vue,scss}\" lib"
+  },
+  "dependencies": {
+    "@icon-park/vue-next": "^1.3.5",
+    "@vuepress/client": "2.0.0-beta.27",
+    "@vuepress/core": "2.0.0-beta.27",
+    "@vuepress/plugin-active-header-links": "2.0.0-beta.27",
+    "@vuepress/plugin-container": "2.0.0-beta.27",
+    "@vuepress/plugin-git": "2.0.0-beta.27",
+    "@vuepress/plugin-medium-zoom": "2.0.0-beta.27",
+    "@vuepress/plugin-nprogress": "2.0.0-beta.27",
+    "@vuepress/plugin-palette": "2.0.0-beta.27",
+    "@vuepress/plugin-prismjs": "2.0.0-beta.27",
+    "@vuepress/plugin-theme-data": "2.0.0-beta.27",
+    "@vuepress/shared": "2.0.0-beta.27",
+    "@vuepress/utils": "2.0.0-beta.27",
+    "@vueuse/core": "^6.7.3",
+    "@waline/client": "^1.5.1",
+    "default-passive-events": "^2.0.0",
+    "reading-time-estimator": "^1.4.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.2.0",
+    "ts-debounce": "^4.0.0",
+    "vue": "^3.2.20",
+    "vue-router": "^4.0.12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
