@@ -148,8 +148,8 @@ module.exports = {
 ``` ts
 // 写入配置信息
 
-import { defineUserConfig } from 'vuepress'
-import type { VpxThemeOptions } from 'vuepress'
+import { defineUserConfig } from '@vuepress/cli'
+import type { VpxThemeOptions } from '@qcyblm/vuepress-theme-vpx'
 
 export default defineUserConfig<VpxThemeOptions>({
   lang: 'zh-CN',
