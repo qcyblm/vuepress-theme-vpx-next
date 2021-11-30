@@ -6,43 +6,6 @@ tocLevel: 3
 
 # 扩展配置
 
-## 首页
-
-本章节中的 Frontmatter 只会在首页中生效。
-
-移除 `footer` 和 `footerHtml`，转移到 `themeLocal.footer`
-
-### heroImageDark
-
-- 类型：`string`
-- 详情：首页暗黑图片的 URL
-
-### actions
-- 类型：
-``` ts
-Array<{
-  text: string
-  link: string
-  type?: 'primary' | 'secondary'
-  target?: string
-  icon?: IconType
-}>
-```
-
-### features
-
-- 类型：
-``` ts
-Array<{
-  imgUrl?: string // 图片 link 链接（可选）
-  imgUrlDark?: string // 暗黑图片 link 链接（可选）
-  title: string // 标题
-  details: string // 描述（支持 HTML 语法）
-  link?: string // 标题链接（可选）
-  target?:  '_self' | '_blank' // 默认当前页跳转
-}>
-```
-
 ## Locale 配置
 
 新增 [iconpark](https://iconpark.oceanengine.com/official) 图标库，和 [Waline](https://waline.js.org/) 评论系统
@@ -239,50 +202,91 @@ Array<{
 
 ## Frontmatter
 
-### author
+### 首页
+
+本章节中的 Frontmatter 只会在首页中生效。
+
+移除 `footer` 和 `footerHtml`，转移到 `themeLocal.footer`
+
+#### heroImageDark
+
+- 类型：`string`
+- 详情：首页暗黑图片的 URL
+
+#### actions
+- 类型：
+``` ts
+Array<{
+  text: string
+  link: string
+  type?: 'primary' | 'secondary'
+  target?: string
+  icon?: IconType
+}>
+```
+
+#### features
+
+- 类型：
+``` ts
+Array<{
+  imgUrl?: string // 图片 link 链接（可选）
+  imgUrlDark?: string // 暗黑图片 link 链接（可选）
+  title: string // 标题
+  details: string // 描述（支持 HTML 语法）
+  link?: string // 标题链接（可选）
+  target?:  '_self' | '_blank' // 默认当前页跳转
+}>
+```
+
+### 普通页面
+
+#### author
 
 - 类型： `string`
 - 详情：文章作者，默认 git 第一提交者，若未有 git 提交者，则取 themeLocal.footer.origin
 
-### imgUrl
+#### imgUrl
 
 - 类型： `string`
 - 详情：首页归档文章左侧图片
 
-### toc
+#### toc
 
 - 类型： `boolean`
 - 默认值：`true`
 - 详情：文章页面是否启动右侧边栏
 
-### tocLevel
+#### tocLevel
 
 - 类型：`number`
 - 默认值：`3`
 - 详情：设置根据页面标题自动生成的右侧边栏的最大深度
 
-### siteInfo
+#### siteInfo
 
 - 类型：`boolean`
-- 详情：文章页面是否关闭底部网站信息
+- 默认值：`true`
+- 详情：是否启动文章内容结尾处的文章信息版权声明模块
 
-### waline
+#### waline
 
 - 类型： `boolean`
-- 详情：文章页面是否关闭 Waline 评论区
+- 默认值：`true`
+- 详情：文章页面是否启动 Waline 评论区
 
 
-### footerWrap
+#### footerWrap
 
 - 类型：`boolean`
 - 详情：文章页面是否关闭底部栏
 
-### friendLinks
+#### friendLinks
 
 - 类型：`boolean`
 - 详情：文章页面是否关闭友情链接
 
-### socialIcons
+#### socialIcons
 
 - 类型：`boolean`
 - 详情：文章页面是否关闭页脚社交图标
