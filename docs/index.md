@@ -35,6 +35,7 @@ yarn init
 
 # 在你的项目中安装
 yarn add -D @vuepress/bundler-webpack@next
+yarn add -D @vuepress/cli@next
 yarn add -D @qcyblm/vuepress-theme-vpx@next
 
 # 在 package.json 中添加一些 scripts
@@ -69,6 +70,7 @@ pnpm init
 
 # 在你的项目中安装
 pnpm add -D @vuepress/bundler-webpack@next
+pnpm add -D @vuepress/cli@next
 pnpm add -D @qcyblm/vuepress-theme-vpx@next
 
 # 在 package.json 中添加一些 scripts
@@ -100,6 +102,7 @@ npm init
 
 # 在你的项目中安装
 npm install -D @vuepress/bundler-webpack@next
+npm install -D @vuepress/cli@next
 npm install -D @qcyblm/vuepress-theme-vpx@next
 
 # 在 package.json 中添加一些 scripts
