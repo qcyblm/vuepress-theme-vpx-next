@@ -11,7 +11,6 @@ export const themeConfig: VpxThemeOptions = {
     { text: '扩展配置', link: '/guide/configs', icon: 'Stretching' },
     { text: '更新日志', link: '/guide/CHANGELOG', icon: 'UpdateRotation' },
   ],
-  tocLevel: 4,
   repo: 'https://gitee.com/qcyblm/vuepress-theme-vpx-next/',
   repoIcon: 'Branch',
   editLinkText: '改善当前页面',

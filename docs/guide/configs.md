@@ -1,7 +1,5 @@
 ---
 date: '2021-11-18'
-toc: true
-tocLevel: 3
 ---
 
 # 扩展配置
