@@ -128,7 +128,7 @@ res.sort((prev, next) => {
 })
 
 function ToText(HTML: string): string {
-  return decodeURI(HTML)
+  return decodeURI(HTML.replace(/%/g, '%25'))
     .replace(/<(style|script|iframe)[^>]*?>[\s\S]+?<\/\1\s*>/gi, '')
     .replace(/<span class="line-number">.*?<\/span>/gi, '')
     .replace(/<[^>]+?>/g, ' ')

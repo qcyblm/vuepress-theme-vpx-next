@@ -49,14 +49,15 @@ import { readingTime } from 'reading-time-estimator'
 import { computed } from 'vue'
 import { useThemeLocaleData } from '../../composables'
 
-const ToText = (HTML: string): string =>
-  decodeURI(HTML)
+function ToText(HTML: string): string {
+  return decodeURI(HTML.replace(/%/g, '%25'))
     .replace(/<(style|script|iframe)[^>]*?>[\s\S]+?<\/\1\s*>/gi, '')
     .replace(/<span class="line-number">.*?<\/span>/gi, '')
     .replace(/<[^>]+?>/g, ' ')
     .replace(/[#]\s+/g, ' ')
     .replace(/ /g, ' ')
     .replace(/>/g, ' ')
+}
 
 const siteLocale = useSiteLocaleData()
 const themeLocale = useThemeLocaleData()
