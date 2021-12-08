@@ -29,7 +29,8 @@ export const themeConfig: VpxThemeOptions = {
   },
   archivesHome: false,
   footer: {
-    licensedLink: 'https://gitee.com/qcyblm/vuepress-theme-vpx-next/blob/main/LICENSE',
+    licensedLink:
+      'https://gitee.com/qcyblm/vuepress-theme-vpx-next/blob/main/LICENSE',
     licensed: 'MIT',
     createYear: 2021,
     origin: '青春永不落幕',
