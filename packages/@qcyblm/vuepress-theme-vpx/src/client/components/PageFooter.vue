@@ -67,7 +67,7 @@
         <li>
           Theme by
           <a
-            href="https://qcyblm.gitee.io/vuepress-theme-Vpx-next/"
+            href="https://qcyblm.gitee.io/vuepress-theme-vpx-next/"
             target="_blank"
             rel="noopener noreferrer"
           >
