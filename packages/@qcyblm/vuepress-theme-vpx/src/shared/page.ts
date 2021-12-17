@@ -2,7 +2,7 @@ import type { GitPluginPageData } from '@vuepress/plugin-git'
 import type { IconType, NavLink, SidebarConfig } from '.'
 
 export interface VpxThemePageData extends GitPluginPageData {
-  filePathRelative: string
+  filePathRelative: string | null
 }
 
 export interface VpxThemePageFrontmatter {

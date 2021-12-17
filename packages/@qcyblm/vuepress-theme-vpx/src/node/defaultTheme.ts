@@ -1,7 +1,11 @@
 import { createPage } from '@vuepress/core'
-import type { Theme, ThemeConfig } from '@vuepress/core'
+import type { Page, Theme, ThemeConfig } from '@vuepress/core'
 import { path } from '@vuepress/utils'
-import type { VpxThemeLocaleOptions, VpxThemePluginsOptions } from '../shared'
+import type {
+  VpxThemeLocaleOptions,
+  VpxThemePageData,
+  VpxThemePluginsOptions,
+} from '../shared'
 import {
   assignDefaultLocaleOptions,
   resolveActiveHeaderLinksPluginOptions,
@@ -40,7 +44,9 @@ export const VpxTheme: Theme<VpxThemeOptions> = ({
     clientAppSetupFiles: path.resolve(__dirname, '../client/clientAppSetup.js'),
 
     // use the relative file path to generate edit link
-    extendsPageData: ({ filePathRelative }) => ({ filePathRelative }),
+    extendsPage: (page: Page<VpxThemePageData>) => {
+      page.data.filePathRelative = page.filePathRelative
+    },
     onPrepared: async (app) => {
       const myData = app.pages.map((page) => {
         return page
