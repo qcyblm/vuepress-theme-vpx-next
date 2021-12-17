@@ -26,9 +26,9 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@vuepress/bundler-webpack": "2.0.0-beta.27",
-    "@vuepress/cli": "^2.0.0-beta.27",
-    "@vuepress/plugin-register-components": "2.0.0-beta.27",
+    "@vuepress/bundler-webpack": "2.0.0-beta.28",
+    "@vuepress/cli": "^2.0.0-beta.28",
+    "@vuepress/plugin-register-components": "2.0.0-beta.28",
     "anywhere": "^1.5.0",
     "cpx2": "^4.0.0",
     "cross-env": "^7.0.3",
