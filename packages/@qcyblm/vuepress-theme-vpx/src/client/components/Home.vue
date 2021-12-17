@@ -138,9 +138,7 @@ function ToText(HTML: string): string {
 }
 
 const archives = computed(() => {
-  if (themeLocale.value.archivesHome === false) {
-    return null
-  }
+  if (!themeLocale.value.archivesHome) return null
   res.forEach((element) => {
     element.dates = new Date(element.date).toLocaleString(locale.value, {
       year: 'numeric',
