@@ -43,9 +43,11 @@ export const VpxTheme: Theme<VpxThemeOptions> = ({
 
     clientAppSetupFiles: path.resolve(__dirname, '../client/clientAppSetup.js'),
 
-    // use the relative file path to generate edit link
     extendsPage: (page: Page<VpxThemePageData>) => {
+      // save relative file path into page data to generate edit link
       page.data.filePathRelative = page.filePathRelative
+      // save title into route meta to generate navbar and sidebar
+      page.routeMeta.title = page.title
     },
     onPrepared: async (app) => {
       const myData = app.pages.map((page) => {
