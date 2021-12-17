@@ -75,8 +75,9 @@ const archives = computed(() => {
   const myData = require('@temp/my-data')
   const res = myData.default.filter((el) => {
     const archivesNotSet = ['/', '/actives.html', '/404.html']
+    const themeLocale = useThemeLocaleData()
     const archivesNot = `${archivesNotSet},${themeLocale.value.archivesNot}`
-    return !archivesNot.includes(el.path)
+    return !archivesNot.split(',').includes(el.path)
   })
   res.sort((prev, next) => {
     if ((prev.data.git.updatedTime, next.data.git.updatedTime)) {
