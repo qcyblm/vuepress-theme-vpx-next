@@ -32,7 +32,7 @@
       </ul>
     </div>
 
-    <div v-if="archives" class="article-list">
+    <div v-if="archives && themeLocale.newWorks" class="article-list">
       <h3>
         <IconPark type="Write" theme="outline" />
         {{ newWorks }}
@@ -343,7 +343,11 @@ const locale: any = computed(() => {
   return siteLocale.value.lang
 })
 const siteInfo = computed(() => {
-  if (frontmatter.value.siteInfo === false) return null
+  if (!themeLocale.value.siteInfo) {
+    return null
+  } else if (frontmatter.value.siteInfo === false) {
+    return null
+  }
 
   return true
 })
