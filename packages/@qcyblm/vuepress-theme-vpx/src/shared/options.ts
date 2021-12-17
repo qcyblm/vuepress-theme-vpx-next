@@ -297,6 +297,8 @@ export interface VpxThemeLocaleData extends LocaleData {
    * A11y text for sidebar toggle button
    */
   toggleSidebar?: string
+  newWorks?: boolean
+  siteInfo?: boolean
   archivesHome?: true | boolean
   archivesTop?: string[]
   archivesFooter?: boolean
