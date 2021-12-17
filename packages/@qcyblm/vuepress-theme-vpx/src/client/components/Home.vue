@@ -1,14 +1,15 @@
 <template>
   <main class="home" :aria-labelledby="heroText ? 'main-title' : undefined">
     <header class="hero">
-      <img
-        v-if="heroImage"
-        :src="withBase(heroImage)"
-        width="128"
-        height="128"
-        :alt="heroAlt"
-      />
-
+      <ClientOnly>
+        <img
+          v-if="heroImage"
+          :src="withBase(heroImage)"
+          width="128"
+          height="128"
+          :alt="heroAlt"
+        />
+      </ClientOnly>
       <div>
         <p v-if="heroText" id="main-title">
           {{ heroText }}
