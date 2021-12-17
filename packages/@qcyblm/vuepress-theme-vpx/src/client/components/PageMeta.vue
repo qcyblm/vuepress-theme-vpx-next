@@ -161,12 +161,12 @@ const LicensedObj = computed(() => {
   if (
     ['cn', 'zh', 'zh-CN', 'zh-SG', 'zh-Hans'].includes(siteLocale.value.lang)
   ) {
-    return `本博客所有文章除特别声明外，均采用 
+    return `本博客所有文章除特别声明外，均采用
   <a href="${footer?.licensedLink}" target="_blank" rel="noopener noreferrer">${footer?.licensed} Licensed</a>
    许可协议。转载请注明出处！`
   }
 
-  return `All articles in this post are licensed under the 
+  return `All articles in this post are licensed under the
   <a href="${footer?.licensedLink}" target="_blank" rel="noopener noreferrer">${footer?.licensed} Licensed</a>
    unless otherwise stated. Please cite the source for reprinting! `
 })
@@ -175,7 +175,9 @@ const archives = computed(() => {
   if (themeLocale.value.archivesHome === false) return null
   const myData = require('@temp/my-data')
   const res = myData.default.filter((el) => {
-    return !['/', '/actives.html', '/404.html'].includes(el.path)
+    const archivesNotSet = ['/', '/actives.html', '/404.html']
+    const archivesNot = `${archivesNotSet},${themeLocale.value.archivesNot}`
+    return !archivesNot.includes(el.path)
   })
   res.sort((prev, next) => {
     if ((prev.data.git.updatedTime, next.data.git.updatedTime))

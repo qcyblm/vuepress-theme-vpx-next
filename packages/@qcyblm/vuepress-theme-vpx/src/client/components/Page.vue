@@ -96,7 +96,9 @@ const shouldShowToc = computed(() => {
 const archives = computed(() => {
   const myData = require('@temp/my-data')
   const res = myData.default.filter((el) => {
-    return !['/', '/actives.html', '/404.html'].includes(el.path)
+    const archivesNotSet = ['/', '/actives.html', '/404.html']
+    const archivesNot = `${archivesNotSet},${themeLocale.value.archivesNot}`
+    return !archivesNot.includes(el.path)
   })
   res.forEach((element) => {
     const locale: any = computed(() => {

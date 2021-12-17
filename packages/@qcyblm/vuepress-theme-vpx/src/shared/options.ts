@@ -300,6 +300,7 @@ export interface VpxThemeLocaleData extends LocaleData {
   newWorks?: boolean
   siteInfo?: boolean
   archivesHome?: true | boolean
+  archivesNot?: string[]
   archivesTop?: string[]
   archivesFooter?: boolean
   waline?: {
